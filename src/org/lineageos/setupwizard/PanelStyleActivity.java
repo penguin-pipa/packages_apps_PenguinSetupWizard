@@ -18,6 +18,7 @@ public class PanelStyleActivity extends BaseSetupWizardActivity {
     private static final int VOLUME_PANEL_STYLE_DEFAULT = 0;
     private static final int VOLUME_PANEL_STYLE_EXPANDABLE = 1;
     private static final int VOLUME_PANEL_STYLE_ONE_UI = 2;
+    private static final int VOLUME_PANEL_STYLE_MYUI = 3;
     private static final int POWER_MENU_STYLE_PENGUIN = 0;
     private static final int POWER_MENU_STYLE_IOS = 1;
 
@@ -40,7 +41,9 @@ public class PanelStyleActivity extends BaseSetupWizardActivity {
         final int volumeStyle =
                 getSecureInt(SETTING_VOLUME_PANEL_STYLE, VOLUME_PANEL_STYLE_DEFAULT);
         final int volumeId;
-        if (volumeStyle == VOLUME_PANEL_STYLE_ONE_UI) {
+        if (volumeStyle == VOLUME_PANEL_STYLE_MYUI) {
+            volumeId = R.id.radio_volume_panel_myui;
+        } else if (volumeStyle == VOLUME_PANEL_STYLE_ONE_UI) {
             volumeId = R.id.radio_volume_panel_oneui;
         } else if (volumeStyle == VOLUME_PANEL_STYLE_EXPANDABLE) {
             volumeId = R.id.radio_volume_panel_expandable;
@@ -58,7 +61,9 @@ public class PanelStyleActivity extends BaseSetupWizardActivity {
     protected void onNextPressed() {
         final int checked = mVolumePanelStyle.getCheckedRadioButtonId();
         final int volumeStyle;
-        if (checked == R.id.radio_volume_panel_oneui) {
+        if (checked == R.id.radio_volume_panel_myui) {
+            volumeStyle = VOLUME_PANEL_STYLE_MYUI;
+        } else if (checked == R.id.radio_volume_panel_oneui) {
             volumeStyle = VOLUME_PANEL_STYLE_ONE_UI;
         } else if (checked == R.id.radio_volume_panel_expandable) {
             volumeStyle = VOLUME_PANEL_STYLE_EXPANDABLE;

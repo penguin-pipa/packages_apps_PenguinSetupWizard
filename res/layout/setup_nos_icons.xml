@@ -80,6 +80,11 @@
                             style="@style/SudRadioButton" />
 
                         <RadioButton
+                            android:id="@+id/radio_qs_style_harmony"
+                            android:text="@string/qs_style_harmony"
+                            style="@style/SudRadioButton" />
+
+                        <RadioButton
                             android:id="@+id/radio_qs_style_default"
                             android:text="@string/qs_style_default"
                             style="@style/SudRadioButton" />

@@ -61,6 +61,10 @@
                             android:id="@+id/radio_volume_panel_oneui"
                             android:text="@string/volume_panel_style_oneui"
                             style="@style/SudRadioButton" />
+                        <RadioButton
+                            android:id="@+id/radio_volume_panel_myui"
+                            android:text="@string/volume_panel_style_myui"
+                            style="@style/SudRadioButton" />
 
                     </RadioGroup>
 
