@@ -14,13 +14,13 @@ import android.os.Bundle;
 import android.os.SystemProperties;
 import android.util.Log;
 import android.view.View;
-import android.widget.CheckBox;
+import android.widget.CompoundButton;
 
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
 public class UpdateRecoveryActivity extends BaseSetupWizardActivity {
 
-    private CheckBox mRecoveryUpdateCheckbox;
+    private CompoundButton mRecoveryUpdateCheckbox;
     private SetupWizardApp mSetupWizardApp;
     private static boolean sFirstTime = true;
 

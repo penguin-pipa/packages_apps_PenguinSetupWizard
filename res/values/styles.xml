@@ -72,4 +72,25 @@
         <item name="android:statusBarColor">?attr/android:windowBackground</item>
         <item name="android:navigationBarColor">?attr/android:windowBackground</item>
     </style>
+    <style name="SetupCardText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+    </style>
+
+    <style name="SetupCardSummary">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:layout_marginTop">2dp</item>
+    </style>
+
+    <style name="SetupCardSwitch" parent="@style/SettingslibSwitchStyle.Expressive" />
+
+    <style name="SetupCardSwitchRow" parent="@style/Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="thumbIcon">@drawable/settingslib_expressive_switch_thumb_icon</item>
+        <item name="thumbIconTint">@color/settingslib_expressive_color_switch_thumb_icon</item>
+    </style>
+
 </resources>

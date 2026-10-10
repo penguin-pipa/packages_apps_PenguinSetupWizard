@@ -37,25 +37,27 @@
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="@dimen/content_margin_left"
-                        android:paddingRight="@dimen/content_margin_right"
-                        android:background="?android:attr/selectableItemBackground"
-                        android:clickable="true">
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                    android:tag="card">
 
-                        <CheckBox
+                        <TextView
+                            android:id="@+id/nos_icons_summary"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/nos_icons_toggle_label"
+                            style="@style/SetupCardText" />
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
                             android:id="@+id/nos_icons_checkbox"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:duplicateParentState="true"
                             android:clickable="false"
-                            style="@style/SudCheckBox.Multiline" />
-
-                        <TextView
-                            android:id="@+id/nos_icons_summary"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/nos_icons_toggle_label"
-                            style="@style/SudCheckBox.Multiline" />
+                            android:layout_marginStart="16dp"
+                            android:theme="@style/Theme.Material3.DynamicColors.DayNight"
+                            style="@style/SetupCardSwitch" />
 
                     </LinearLayout>
 
@@ -72,7 +74,8 @@
                     <RadioGroup
                         android:id="@+id/qs_style_radio_group"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:tag="cards">
 
                         <RadioButton
                             android:id="@+id/radio_qs_style_penguin"
@@ -104,7 +107,8 @@
                     <RadioGroup
                         android:id="@+id/qs_layout_radio_group"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:tag="cards">
 
                         <RadioButton
                             android:id="@+id/radio_qs_layout_combined"

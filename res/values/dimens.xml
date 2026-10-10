@@ -26,4 +26,10 @@
     <dimen name="penguin_window_corner_radius">32dp</dimen>
 
     <dimen name="penguin_button_corner_radius">100dp</dimen>
+    <dimen name="setup_card_radius">24dp</dimen>
+    <dimen name="setup_card_radius_inner">6dp</dimen>
+    <dimen name="setup_card_gap">3dp</dimen>
+    <dimen name="setup_card_padding">20dp</dimen>
+    <dimen name="setup_card_padding_vertical">14dp</dimen>
+    <dimen name="setup_card_min_height">64dp</dimen>
 </resources>

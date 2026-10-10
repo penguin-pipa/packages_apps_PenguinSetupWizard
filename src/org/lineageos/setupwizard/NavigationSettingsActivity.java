@@ -15,7 +15,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -29,7 +29,7 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
 
     private String mSelection = NAV_BAR_MODE_GESTURAL_OVERLAY;
 
-    private CheckBox mHideGesturalHint;
+    private CompoundButton mHideGesturalHint;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

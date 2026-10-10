@@ -44,7 +44,8 @@
                     <RadioGroup
                         android:id="@+id/navigation_radio_group"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:tag="cards">
 
                         <RadioButton
                             android:id="@+id/radio_gesture"
@@ -59,16 +60,15 @@
 
                     </RadioGroup>
 
-                    <CheckBox
+                    <com.google.android.material.materialswitch.MaterialSwitch
                         android:id="@+id/hide_navigation_hint"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/hide_gesture_hint"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginBottom="6dp"
-                        android:layout_marginLeft="-6dp"
-                        android:paddingLeft="18dp"
-                        style="@style/SudCheckBox" />
+                        android:layout_marginTop="12dp"
+                        android:tag="card"
+                        android:theme="@style/Theme.Material3.DynamicColors.DayNight"
+                        style="@style/SetupCardSwitchRow" />
                 </LinearLayout>
             </ScrollView>
         </FrameLayout>

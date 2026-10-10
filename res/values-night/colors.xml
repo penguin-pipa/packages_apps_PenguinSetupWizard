@@ -7,4 +7,5 @@
     <color name="divider">#40ffffff</color>
 
     <color name="sud_glif_background_color">#00000000</color>
+    <color name="setup_card_background">#8C1E1C22</color>
 </resources>

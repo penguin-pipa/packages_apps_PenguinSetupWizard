@@ -49,6 +49,7 @@ import java.util.List;
 
 import org.lineageos.setupwizard.NavigationLayout.NavigationBarListener;
 import org.lineageos.setupwizard.util.SetupWizardUtils;
+import org.lineageos.setupwizard.widget.Cards;
 
 public abstract class BaseSetupWizardActivity extends AppCompatActivity implements
         NavigationBarListener {
@@ -317,6 +318,7 @@ public abstract class BaseSetupWizardActivity extends AppCompatActivity implemen
     private void initLayout() {
         if (getLayoutResId() != -1) {
             setContentView(getLayoutResId());
+            Cards.apply(getWindow().getDecorView());
             final View glif = findViewById(R.id.setup_wizard_layout);
             if (glif instanceof GlifLayout) {
 

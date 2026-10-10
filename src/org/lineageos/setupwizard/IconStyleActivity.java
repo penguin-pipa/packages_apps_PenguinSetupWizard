@@ -8,7 +8,7 @@ package org.lineageos.setupwizard;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
-import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 
 public class IconStyleActivity extends BaseSetupWizardActivity {
@@ -23,7 +23,7 @@ public class IconStyleActivity extends BaseSetupWizardActivity {
     private static final int QS_STYLE_PENGUIN = 1;
     private static final int QS_STYLE_HARMONY = 3;
 
-    private CheckBox mEnableNosIcons;
+    private CompoundButton mEnableNosIcons;
     private RadioGroup mQsStyle;
     private RadioGroup mQsLayout;
 

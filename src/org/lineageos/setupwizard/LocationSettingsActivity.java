@@ -12,12 +12,12 @@ import android.os.Process;
 import android.os.UserManager;
 import android.provider.Settings;
 import android.view.View;
-import android.widget.CheckBox;
+import android.widget.CompoundButton;
 
 public class LocationSettingsActivity extends BaseSetupWizardActivity {
 
-    private CheckBox mLocationAccess;
-    private CheckBox mLocationAgpsAccess;
+    private CompoundButton mLocationAccess;
+    private CompoundButton mLocationAgpsAccess;
 
     private LocationManager mLocationManager;
 
