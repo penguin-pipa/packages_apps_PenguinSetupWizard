@@ -21,6 +21,7 @@ import android.provider.Settings;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
 
@@ -32,6 +33,9 @@ public class RestoreIntroActivity extends SubBaseActivity {
 
     private static final String GOOGLE_ACCOUNT_TYPE = "com.google";
     private static final long NETWORK_WAIT_MS = 20000L;
+    private static final int RESULT_FIRST_RESTORE_CHOICE = 100;
+    private static final int RESULT_SET_UP_AS_NEW = 104;
+    private static final int RESULT_CLOUD_RESTORE = 107;
 
     private final Handler mNetworkHandler = new Handler(Looper.getMainLooper());
     private final Runnable mNetworkTimeout = this::onNetworkSettled;
@@ -54,6 +58,16 @@ public class RestoreIntroActivity extends SubBaseActivity {
         Intent data = activityResult.getData();
         if (mAwaitingAccount) {
             mAwaitingAccount = false;
+            launchRestoreFlow();
+            return;
+        }
+        if (resultCode == RESULT_CLOUD_RESTORE && launchCloudRestore()) {
+            return;
+        }
+        if (resultCode > RESULT_FIRST_RESTORE_CHOICE && resultCode != RESULT_SET_UP_AS_NEW
+                && resultCode != RESULT_CLOUD_RESTORE) {
+            Toast.makeText(this, R.string.restore_device_transfer_unsupported,
+                    Toast.LENGTH_LONG).show();
             launchRestoreFlow();
             return;
         }
@@ -161,6 +175,15 @@ public class RestoreIntroActivity extends SubBaseActivity {
             return false;
         }
         mAwaitingAccount = true;
+        startSubactivity(intent);
+        return true;
+    }
+
+    private boolean launchCloudRestore() {
+        Intent intent = new Intent(ACTION_GOOGLE_CLOUD_RESTORE);
+        if (intent.resolveActivity(getPackageManager()) == null) {
+            return false;
+        }
         startSubactivity(intent);
         return true;
     }

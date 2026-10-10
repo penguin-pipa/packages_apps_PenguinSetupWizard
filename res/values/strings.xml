@@ -113,4 +113,5 @@
     <string name="whats_new_hello_button">See what\'s new</string>
     <string name="whats_new_enter_button">Get started with <xliff:g id="name" example="PenguinOS">%1$s</xliff:g></string>
 
+    <string name="restore_device_transfer_unsupported">Copying from another phone isn\'t available here yet. Choose \"Can\'t use other device?\" to restore from your Google backup.</string>
 </resources>
