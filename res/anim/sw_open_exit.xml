@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The PenguinOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@interpolator/sw_page_slide"
+    android:shareInterpolator="true"
+    android:zAdjustment="normal">
+    <translate
+        android:duration="@integer/sw_page_duration"
+        android:fromXDelta="0%"
+        android:toXDelta="-30%" />
+    <alpha
+        android:duration="@integer/sw_page_duration"
+        android:fromAlpha="1"
+        android:toAlpha="0.5" />
+</set>

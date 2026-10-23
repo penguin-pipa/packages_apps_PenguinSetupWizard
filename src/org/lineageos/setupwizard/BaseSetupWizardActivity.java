@@ -399,12 +399,11 @@ public abstract class BaseSetupWizardActivity extends AppCompatActivity implemen
     }
 
     protected void applyForwardTransition() {
-        TransitionHelper.applyForwardTransition(this, DEFAULT_TRANSITION, true);
+        overridePendingTransition(R.anim.sw_open_enter, R.anim.sw_open_exit);
     }
 
     protected void applyBackwardTransition() {
-        TransitionHelper.applyBackwardTransition(BaseSetupWizardActivity.this,
-                DEFAULT_TRANSITION, true);
+        overridePendingTransition(R.anim.sw_close_enter, R.anim.sw_close_exit);
     }
 
     protected final class StartDecoratedActivityForResult

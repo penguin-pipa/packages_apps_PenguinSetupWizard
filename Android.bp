@@ -27,6 +27,7 @@ android_app {
 
     static_libs: [
         "androidx.activity_activity",
+        "lottie",
         "SettingsLib",
         "setupcompat",
         "setupdesign",

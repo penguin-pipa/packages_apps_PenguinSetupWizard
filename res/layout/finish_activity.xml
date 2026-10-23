@@ -18,7 +18,7 @@
         android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_aurora"
+        android:background="@color/sw_page_background"
         android:visibility="visible"/>
 
     <LinearLayout
@@ -28,16 +28,12 @@
         android:orientation="vertical"
         style="@style/SudContentFrame">
 
-        <ImageView
-            android:id="@+id/brand_logo"
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/finish_illustration"
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="1"
-            android:src="@drawable/penguin_logo"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:gravity="center"
-            android:padding="@dimen/content_margin_left"/>
+            android:padding="@dimen/finish_illustration_padding" />
 
         <org.lineageos.setupwizard.NavigationLayout
             android:id="@+id/navigation_bar"

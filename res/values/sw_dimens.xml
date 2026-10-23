@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The PenguinOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <dimen name="welcome_illustration_size">168dp</dimen>
+    <dimen name="welcome_greeting_text_size">40sp</dimen>
+    <dimen name="page_illustration_size">220dp</dimen>
+    <dimen name="finish_illustration_padding">88dp</dimen>
+</resources>

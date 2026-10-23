@@ -17,20 +17,40 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:gravity="start|center_vertical">
+            android:gravity="center">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/welcome_illustration"
+                android:layout_width="@dimen/welcome_illustration_size"
+                android:layout_height="@dimen/welcome_illustration_size" />
+
+            <TextView
+                android:id="@+id/welcome_greeting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/welcome_greeting_text_size" />
 
             <TextView
                 android:id="@+id/welcome_title"
-                style="@style/WelcomeTitle"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hyphenationFrequency="none" />
+                android:layout_marginTop="12dp"
+                android:alpha="0"
+                android:gravity="center"
+                android:hyphenationFrequency="none"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/welcome_codename"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="16dp"
+                android:alpha="0"
                 android:background="@drawable/bg_codename_chip"
                 android:paddingStart="14dp"
                 android:paddingEnd="14dp"

@@ -27,6 +27,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.setupcompat.util.SystemBarHelper;
 
+import org.lineageos.setupwizard.util.Illustrations;
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
 public class FinishActivity extends BaseSetupWizardActivity {
@@ -62,6 +63,7 @@ public class FinishActivity extends BaseSetupWizardActivity {
             logActivityState("onCreate savedInstanceState=" + savedInstanceState);
         }
         setNextText(R.string.start);
+        Illustrations.play(findViewById(R.id.finish_illustration), R.raw.finish_smile, false);
 
         // Edge-to-edge. Needed for the background view to fill the full screen.
         final Window window = getWindow();

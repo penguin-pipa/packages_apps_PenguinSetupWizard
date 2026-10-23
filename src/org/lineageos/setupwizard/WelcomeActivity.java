@@ -12,17 +12,26 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Build;
 import android.view.View;
+import android.view.animation.PathInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.setupcompat.util.SystemBarHelper;
 
+import org.lineageos.setupwizard.util.Illustrations;
 import org.lineageos.setupwizard.util.SetupWizardUtils;
+import org.lineageos.setupwizard.widget.TypewriterText;
 
 public class WelcomeActivity extends SubBaseActivity {
 
     private static final String ACTION_ACCESSIBILITY_SETTINGS =
             "android.settings.ACCESSIBILITY_SETTINGS_FOR_SUW";
+    private static final long REVEAL_DELAY_MS = 1500;
+    private static final long REVEAL_MS = 600;
+    private static final long GREETING_DELAY_MS = 1100;
+
+    private TypewriterText mGreeting;
 
     @Override
     protected void onStartSubactivity() {
@@ -50,6 +59,14 @@ public class WelcomeActivity extends SubBaseActivity {
             emergButton.setVisibility(View.GONE);
         }
 
+        LottieAnimationView illustration = findViewById(R.id.welcome_illustration);
+        Illustrations.play(illustration, R.raw.welcome_logo, false);
+        mGreeting = new TypewriterText(findViewById(R.id.welcome_greeting),
+                getResources().getStringArray(R.array.welcome_greetings));
+        mGreeting.start(GREETING_DELAY_MS);
+        reveal(findViewById(R.id.welcome_title), REVEAL_DELAY_MS);
+        reveal(findViewById(R.id.welcome_codename), REVEAL_DELAY_MS + 120);
+
         TextView welcomeTitle = findViewById(R.id.welcome_title);
         if (SetupWizardUtils.isManagedProfile(this)) {
             welcomeTitle.setText(getString(R.string.setup_managed_profile_welcome_message));
@@ -64,6 +81,24 @@ public class WelcomeActivity extends SubBaseActivity {
                 SetupWizardUtils.finishSetupWizard(WelcomeActivity.this);
             });
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (mGreeting != null) {
+            mGreeting.stop();
+        }
+        super.onDestroy();
+    }
+
+    private void reveal(View view, long delayMs) {
+        view.setTranslationY(getResources().getDisplayMetrics().density * 16);
+        view.animate()
+                .alpha(1f)
+                .translationY(0f)
+                .setStartDelay(delayMs)
+                .setDuration(REVEAL_MS)
+                .setInterpolator(new PathInterpolator(0.2f, 0f, 0f, 1f));
     }
 
     @Override

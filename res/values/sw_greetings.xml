@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The PenguinOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string-array name="welcome_greetings" translatable="false">
+        <item>Hello</item>
+        <item>नमस्ते</item>
+        <item>Bonjour</item>
+        <item>Hola</item>
+        <item>こんにちは</item>
+        <item>Ciao</item>
+        <item>안녕하세요</item>
+        <item>Olá</item>
+        <item>Hallo</item>
+        <item>你好</item>
+    </string-array>
+</resources>

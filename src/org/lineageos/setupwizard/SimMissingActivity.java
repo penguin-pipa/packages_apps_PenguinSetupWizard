@@ -12,6 +12,7 @@ import android.annotation.Nullable;
 import android.content.Intent;
 import android.os.Bundle;
 
+import org.lineageos.setupwizard.util.Illustrations;
 import org.lineageos.setupwizard.util.SetupWizardUtils;
 
 public class SimMissingActivity extends BaseSetupWizardActivity {
@@ -33,6 +34,7 @@ public class SimMissingActivity extends BaseSetupWizardActivity {
             return;
         }
         getGlifLayout().setDescriptionText(getString(R.string.sim_missing_summary));
+        Illustrations.play(findViewById(R.id.sim_illustration), R.raw.sim_insert, true);
         setNextAllowed(true);
     }
 
