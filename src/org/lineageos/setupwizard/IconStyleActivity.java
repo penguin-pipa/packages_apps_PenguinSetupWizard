@@ -21,7 +21,10 @@ public class IconStyleActivity extends BaseSetupWizardActivity {
 
     private static final int QS_STYLE_DEFAULT = 0;
     private static final int QS_STYLE_PENGUIN = 1;
+    private static final int QS_STYLE_MYUI = 2;
     private static final int QS_STYLE_HARMONY = 3;
+    private static final int QS_STYLE_COLOROS = 5;
+    private static final int QS_STYLE_STOCK = 6;
 
     private CompoundButton mEnableNosIcons;
     private RadioGroup mQsStyle;
@@ -50,6 +53,12 @@ public class IconStyleActivity extends BaseSetupWizardActivity {
             mQsStyle.check(R.id.radio_qs_style_default);
         } else if (qsStyle == QS_STYLE_HARMONY) {
             mQsStyle.check(R.id.radio_qs_style_harmony);
+        } else if (qsStyle == QS_STYLE_MYUI) {
+            mQsStyle.check(R.id.radio_qs_style_myui);
+        } else if (qsStyle == QS_STYLE_STOCK) {
+            mQsStyle.check(R.id.radio_qs_style_stock);
+        } else if (qsStyle == QS_STYLE_COLOROS) {
+            mQsStyle.check(R.id.radio_qs_style_coloros);
         } else {
             mQsStyle.check(R.id.radio_qs_style_penguin);
         }
@@ -66,6 +75,12 @@ public class IconStyleActivity extends BaseSetupWizardActivity {
             qsStyle = QS_STYLE_DEFAULT;
         } else if (checkedQsStyle == R.id.radio_qs_style_harmony) {
             qsStyle = QS_STYLE_HARMONY;
+        } else if (checkedQsStyle == R.id.radio_qs_style_myui) {
+            qsStyle = QS_STYLE_MYUI;
+        } else if (checkedQsStyle == R.id.radio_qs_style_stock) {
+            qsStyle = QS_STYLE_STOCK;
+        } else if (checkedQsStyle == R.id.radio_qs_style_coloros) {
+            qsStyle = QS_STYLE_COLOROS;
         } else {
             qsStyle = QS_STYLE_PENGUIN;
         }

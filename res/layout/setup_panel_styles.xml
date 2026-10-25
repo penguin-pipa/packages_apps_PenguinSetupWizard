@@ -67,6 +67,11 @@
                             android:text="@string/volume_panel_style_myui"
                             style="@style/SudRadioButton" />
 
+                        <RadioButton
+                            android:id="@+id/radio_volume_panel_coloros"
+                            android:text="@string/volume_panel_style_coloros"
+                            style="@style/SudRadioButton" />
+
                     </RadioGroup>
 
                     <TextView

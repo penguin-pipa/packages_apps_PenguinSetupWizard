@@ -83,8 +83,23 @@
                             style="@style/SudRadioButton" />
 
                         <RadioButton
+                            android:id="@+id/radio_qs_style_myui"
+                            android:text="@string/qs_style_myui"
+                            style="@style/SudRadioButton" />
+
+                        <RadioButton
                             android:id="@+id/radio_qs_style_harmony"
                             android:text="@string/qs_style_harmony"
+                            style="@style/SudRadioButton" />
+
+                        <RadioButton
+                            android:id="@+id/radio_qs_style_stock"
+                            android:text="@string/qs_style_stock"
+                            style="@style/SudRadioButton" />
+
+                        <RadioButton
+                            android:id="@+id/radio_qs_style_coloros"
+                            android:text="@string/qs_style_coloros"
                             style="@style/SudRadioButton" />
 
                         <RadioButton

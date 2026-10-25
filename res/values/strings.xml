@@ -90,6 +90,9 @@
     <string name="qs_style_penguin">Penguin</string>
     <string name="qs_style_default">Default</string>
     <string name="qs_style_harmony">HarmonyOS</string>
+    <string name="qs_style_myui">MyUI</string>
+    <string name="qs_style_stock">Stock Android</string>
+    <string name="qs_style_coloros" translatable="false">ColorOS</string>
     <string name="qs_layout_label">Quick Settings layout</string>
     <string name="qs_layout_combined">Combined</string>
     <string name="qs_layout_split">Split</string>
@@ -100,6 +103,7 @@
     <string name="volume_panel_style_expandable">Expandable</string>
     <string name="volume_panel_style_oneui">One UI</string>
     <string name="volume_panel_style_myui">MyUI</string>
+    <string name="volume_panel_style_coloros" translatable="false">ColorOS</string>
     <string name="power_menu_style_label">Power menu style</string>
     <string name="power_menu_style_penguin">Penguin</string>
     <string name="power_menu_style_ios">iOS</string>
