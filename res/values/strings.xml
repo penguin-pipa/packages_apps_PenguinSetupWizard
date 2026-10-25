@@ -119,5 +119,7 @@
     <string name="liquid_glass_summary">Use glass surfaces across the system</string>
     <string name="liquid_glass_separate_qs_title">Penguin QS in separate mode</string>
     <string name="liquid_glass_separate_qs_summary">Liquid Glass is designed for Penguin QS opened as its own panel</string>
+    <string name="liquid_glass_cos_title">COS experience</string>
+    <string name="liquid_glass_cos_summary">ColorOS motion and looks across the system. Best used with ColorOS Quick Settings</string>
     <string name="liquid_glass_laboratory_note">You can turn Liquid Glass off anytime in Penguin Laboratory.</string>
 </resources>

@@ -118,6 +118,44 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/cos_experience"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:clickable="true">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/liquid_glass_cos_title"
+                                    style="@style/SetupCardText" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/liquid_glass_cos_summary"
+                                    style="@style/SetupCardSummary" />
+                            </LinearLayout>
+
+                            <com.google.android.material.materialswitch.MaterialSwitch
+                                android:id="@+id/cos_experience_switch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:duplicateParentState="true"
+                                android:clickable="false"
+                                android:theme="@style/Theme.Material3.DynamicColors.DayNight"
+                                style="@style/SetupCardSwitch" />
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
