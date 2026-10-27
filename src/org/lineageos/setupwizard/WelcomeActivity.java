@@ -60,12 +60,20 @@ public class WelcomeActivity extends SubBaseActivity {
         }
 
         LottieAnimationView illustration = findViewById(R.id.welcome_illustration);
-        Illustrations.play(illustration, R.raw.welcome_logo, false);
-        mGreeting = new TypewriterText(findViewById(R.id.welcome_greeting),
-                getResources().getStringArray(R.array.welcome_greetings));
-        mGreeting.start(GREETING_DELAY_MS);
+        if (illustration != null) {
+            Illustrations.play(illustration, R.raw.welcome_logo, false);
+        }
+        TextView greetingView = findViewById(R.id.welcome_greeting);
+        if (greetingView != null) {
+            mGreeting = new TypewriterText(greetingView,
+                    getResources().getStringArray(R.array.welcome_greetings));
+            mGreeting.start(GREETING_DELAY_MS);
+        }
         reveal(findViewById(R.id.welcome_title), REVEAL_DELAY_MS);
-        reveal(findViewById(R.id.welcome_codename), REVEAL_DELAY_MS + 120);
+        View codenameView = findViewById(R.id.welcome_codename);
+        if (codenameView != null) {
+            reveal(codenameView, REVEAL_DELAY_MS + 120);
+        }
 
         TextView welcomeTitle = findViewById(R.id.welcome_title);
         if (SetupWizardUtils.isManagedProfile(this)) {
